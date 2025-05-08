@@ -8,6 +8,7 @@ import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "./", // 将资源的绝对路径路径改为相对路径
   server: {
     proxy: {
       '/api/info': {

@@ -34,7 +34,6 @@ defineOptions({
 })
 import {ref} from 'vue'
 import {login} from '@/api/auth'
-import * as timers from "node:timers";
 const form = ref({username:'', password:''})
 const submit = async () => {
   try {
