@@ -1,16 +1,16 @@
 <template>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <div class="common-layout">
-    <el-container style="height: 100vh;">
-      <el-header style="height: 10vh; background: linear-gradient( to right,#00caca 200px, #009f9f 200px)">
-        <el-row :gutter="20">
-          <div class="logo" style="width: 190px; height: 60px">
+    <el-container class="container">
+      <el-header class="header">
+        <el-row>
+          <div class="logoBox">
             <img class="logo" src="../assets/img/Inverted_Logo.png" alt="icon"/>
           </div>
         </el-row>
       </el-header>
       <el-container>
-        <el-aside width="200px" style="height: 100%; background-color: #00caca">
+        <el-aside width="15vw" style="height: 100%; background-color: #00caca">
           <el-menu :default-active="$route.path"
                    class="el-menu-vertical-demo"
                    active-text-color="orange"
@@ -48,11 +48,26 @@ import {ElMain} from "element-plus";
 import {ElSubMenu} from "element-plus";
 </script>
 <style scoped>
-.logo{
-  height: 45px;
+.container {
+  height: 100vh;
+}
+.header {
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  background: linear-gradient( to right,#00caca 15vw, #009f9f 15vw);
+}
+.logoBox {
   display: flex;
+  width: 15vw;
+  height: 10vh;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.logo{
+  height: 45px;
 }
 .sub_menu{
   background-color: #00c1c1;

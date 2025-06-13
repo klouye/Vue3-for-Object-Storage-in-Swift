@@ -14,13 +14,23 @@ api.interceptors.response.use(
         return response.data;
     },
     (err) => {
+        // if (typeof Cookies.get("token") === "undefined" && err.status === 401) {
+        //     router.push("/notLogin").then(() => {
+        //         console.error("notLogin error", err.message.status);
+        //     });
+        // }
+        // else if (typeof Cookies.get("token") === "string" && err.status === 401) {
+        //     router.push("/tokenExpired").then(() => {
+        //         console.error("tokenExpired error", err.message.status);
+        //     });
+        // }
         if (typeof Cookies.get("token") === "undefined" && err.status === 401) {
-            router.push("/notLogin").then(() => {
+            router.push("/loginError?value=notLogin").then(() => {
                 console.error("notLogin error", err.message.status);
             });
         }
         else if (typeof Cookies.get("token") === "string" && err.status === 401) {
-            router.push("/tokenExpired").then(() => {
+            router.push("/loginError?value=tokenExpired").then(() => {
                 console.error("tokenExpired error", err.message.status);
             });
         }

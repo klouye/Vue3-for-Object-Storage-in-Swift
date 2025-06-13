@@ -16,14 +16,6 @@ const router = createRouter({
       component: () => import("@/views/loginError.vue"),
     },
     {
-      path: "/notLogin",
-      component: () => import("@/views/notLogin.vue"),
-    },
-    {
-      path: "/tokenExpired",
-      component: () => import("@/views/tokenExpired.vue"),
-    },
-    {
       path: "/dashboard",
       component: () => import("@/views/dashboard.vue"),
       children: [

@@ -41,7 +41,7 @@ const submit = async () => {
     await router.push('/dashboard')
   } catch (error) {
     console.error('login error!!',error)
-    await router.push('/loginError')
+    await router.push('/loginError?value=loginError')
   }
 }
 </script>

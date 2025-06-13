@@ -1,6 +1,6 @@
 <template>
   <div class="position">
-    <img src="../assets/img/Logo.png" height="180" width="180" alt="icon"/>
+    <img src="../assets/img/Logo.png" alt="icon"/>
     <h1>个人网盘管理系统</h1>
   </div>
 </template>
@@ -12,20 +12,22 @@ defineOptions({
 </script>
 
 <style scoped>
+:root {
+  margin: 0;
+  padding: 0;
+}
 .position{
-  height: 100%;
+  height: 80vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 .position > img{
-  position: absolute;
-  top: 15%;
+  height: 180px;
+  width: 180px;
 }
 .position > h1{
-  position: absolute;
   font-size: 50px;
-  top: 40%;
 }
 </style>
