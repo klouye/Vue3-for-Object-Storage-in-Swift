@@ -50,12 +50,14 @@ switch (urlParams.get("value")) {
   margin-bottom: 30px;
 }
 .content button {
-  font-size: 30px;
+  --font-size: 30px;
+  --padding: 20px;
+  font-size: var(--font-size);
+  padding: var(--padding);
   color: #fff;
   background: #00d1d1;
   border: none;
-  border-radius: 50px;
-  padding: 20px;
+  border-radius: calc(var(--font-size) + var(--padding));
   cursor: pointer;
 }
 </style>
